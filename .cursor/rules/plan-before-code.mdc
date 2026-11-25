@@ -1,0 +1,25 @@
+---
+description: Mỗi yêu cầu mới phải có plan, task và requirement trước khi code, trừ khi user bảo code ngay.
+alwaysApply: true
+---
+
+# Plan trước khi code
+
+Với **mỗi yêu cầu mới** (tính năng, UI, copy, refactor, fix không khẩn):
+
+1. **Không viết/sửa code** cho đến khi user xác nhận plan, **trừ khi** user nói rõ code ngay (`code ngay`, `implement`, `làm luôn`, `cứ sửa`, `apply`, `ship`).
+2. Trước khi code, luôn đưa ra:
+   - **Requirement:** phạm vi, in/out, ràng buộc (brief MTX, không bịa SĐT/giá/cam kết).
+   - **Plan:** bước làm, file chính, rủi ro.
+   - **Task:** checklist ngắn (todo) theo bước.
+3. Chờ user chọn phạm vi hoặc bảo làm. Sau khi duyệt mới implement.
+
+## Code ngay (bỏ qua plan)
+
+User chỉ định implement ngay, hoặc đây là bước tiếp theo của plan **đã duyệt** trong cùng phiên.
+
+## Ví dụ
+
+- User: “làm giống trang X” → plan + task, **không** sửa file.
+- User: “code ngay, đổi 5 bước quy trình” → sửa code luôn.
+- User: “ok làm P1” sau khi có plan → implement P1.

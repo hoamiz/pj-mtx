@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #16834a;
+  --color-accent: #1677b8;
+  --color-surface: #f1f5f9;
+  --color-ink: #1f2937;
+  --color-muted: #4b5563;
+  --color-paper: #ffffff;
+  --font-sans: var(--font-be-vietnam-pro), "Segoe UI", system-ui, sans-serif;
+}
+
+html {
+  overflow-x: clip;
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 3px;
+}

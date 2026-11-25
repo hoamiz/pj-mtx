@@ -1,0 +1,100 @@
+@keyframes mtx-fab-ring {
+  0% {
+    transform: scale(0.45);
+    opacity: 0.65;
+  }
+
+  100% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}
+
+@keyframes mtx-fab-ring-fill {
+  0%,
+  100% {
+    transform: scale(0.75);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes mtx-fab-shake {
+  0%,
+  50%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  10%,
+  30% {
+    transform: rotate(-22deg);
+  }
+
+  20%,
+  40% {
+    transform: rotate(22deg);
+  }
+}
+
+@keyframes mtx-fab-tada {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  10%,
+  20% {
+    transform: scale(0.9) rotate(-6deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale(1.12) rotate(6deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    transform: scale(1.12) rotate(-6deg);
+  }
+}
+
+.mtx-fab-wrap {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 5.75rem;
+  height: 5.75rem;
+}
+
+.mtx-fab-ring,
+.mtx-fab-ring-fill {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+.mtx-fab-ring {
+  border: 3px solid currentColor;
+  animation: mtx-fab-ring 1.2s infinite ease-out !important;
+}
+
+.mtx-fab-ring-fill {
+  inset: 0.55rem;
+  background: color-mix(in srgb, currentColor 40%, transparent);
+  animation: mtx-fab-ring-fill 2.3s infinite ease-in-out !important;
+}
+
+.mtx-fab-shake {
+  animation: mtx-fab-shake 1s infinite ease-in-out !important;
+}
+
+.mtx-fab-tada {
+  animation: mtx-fab-tada 1s infinite ease-in-out !important;
+}
