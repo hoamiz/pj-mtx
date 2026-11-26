@@ -13,7 +13,7 @@ export const media = {
   },
   heroCover: {
     src: "/images/hero-cover.jpg",
-    alt: "Minh họa khu dân cư yên tĩnh.",
+    alt: "Xe hút hầm cầu Môi Trường Xanh.",
     width: 1600,
     height: 900,
   },

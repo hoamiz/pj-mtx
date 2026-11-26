@@ -1,4 +1,4 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type { ButtonHTMLAttributes, ReactNode, Ref } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -52,16 +52,19 @@ export function ButtonLink({
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: Variant;
+  ref?: Ref<HTMLButtonElement>;
 };
 
 export function Button({
   variant = "primary",
   className,
   type = "button",
+  ref,
   ...props
 }: ButtonProps) {
   return (
     <button
+      ref={ref}
       type={type}
       className={cn(buttonClasses[variant], className)}
       {...props}

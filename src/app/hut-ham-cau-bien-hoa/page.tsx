@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ServiceViewTracker } from "@/components/analytics/service-view-tracker";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { ContactBanner } from "@/components/sections/contact-banner";
+import { RelatedPosts } from "@/components/sections/related-posts";
 import { FAQList } from "@/components/sections/faq-list";
 import { ButtonLink } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -12,6 +13,7 @@ import { contactHref } from "@/config/site";
 import { septicFaqs } from "@/content/faq";
 import { media } from "@/content/media";
 import { septicPumpingContent as content } from "@/content/septic-pumping";
+import { getPostsBySlugs } from "@/content/blog";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata({
@@ -118,6 +120,12 @@ export default function SepticPumpingPage() {
       </section>
 
       <FAQList items={septicFaqs} />
+      <RelatedPosts
+        posts={getPostsBySlugs([
+          "dau-hieu-ham-cau-day",
+          "khi-nao-can-hut-ham-cau",
+        ])}
+      />
       <ContactBanner title={content.closing.title} body={content.closing.body} />
     </>
   );

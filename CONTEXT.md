@@ -6,6 +6,12 @@
 - Phase 1: Next.js 16.4.6, React 19.3.0, Tailwind CSS 4.3.3, TypeScript 5.9.3. App Router, thư mục `src/`, npm. Static export ra `out/`.
 - Đã tắt `cacheComponents` (và `partialPrefetching` đi kèm) vì Next báo PPR không chạy cùng `output: "export"`.
 - Màu đặt trong `@theme` của Tailwind v4. Font Be Vietnam Pro, subset vietnamese và latin; fallback Segoe UI / system-ui. Build tải font thành công.
+
+## 26/11/2026 — Color batch Forest Green + Orange
+
+- Token: brand `#16834A`, accent `#F28C28`, surface `#F5F8F4`, ink `#17251C`, muted `#526158`, paper `#FFFFFF`.
+- Footer + CTA cuối: Forest Dark `#12452B` (không thêm token). Cam dùng badge/`Bước`, không dùng chữ cam nhỏ trên nền trắng.
+- Link Zalo text `#0068FF`; FAB Zalo/gọi giữ nguyên.
 - Điện thoại và Zalo trong cấu hình đang rỗng. Chưa có nút gọi hoặc Zalo.
 - Trang `/` chỉ có H1 tên thương hiệu và câu vai trò đã xác nhận. Chưa có trang dịch vụ, bảng giá, chính sách, sitemap, canonical hay ảnh Open Graph.
 - Git local khởi tạo trong `pj-mtx`. Chưa commit, chưa remote.
@@ -110,3 +116,36 @@
 - Header, footer, khối khu vực: **Khu vực phục vụ: Biên Hòa, Đồng Nai**.
 - FAQ “ai sẽ thực hiện dịch vụ”: nhân viên MTX khảo sát/tư vấn/thực hiện, không nói đơn vị khác.
 - Menu `text-base`; tab hiện tại brand + gạch dưới.
+
+## 25/11/2026 — Hub bài hướng dẫn `/bai-viet`
+
+- Đã thay bằng `/blog` (xem mục Blog bên dưới). Route `/bai-viet` đã xóa, không 301.
+
+## 25/11/2026 — Blog `/blog` (5 bài SEO)
+
+- Index `/blog` nhóm Thông cống / Hút hầm cầu / Chi phí. 5 slug tĩnh, JSON-LD BlogPosting, OG article, CTA Zalo + SĐT MTX.
+- Nội dung: MTX thực hiện dịch vụ; không bảng giá số; không trang phường; không CMS.
+- Footer nhãn Blog. Trang dịch vụ trỏ bài mới.
+
+## 26/11/2026 — Homepage mobile gọn + dialog Liên hệ desktop
+
+- Mobile: hero 1 câu, ẩn contactHint; intro ẩn body trùng H2; quy trình dùng `stepsMobile`; 3 link dưới CTA hero (Thông cống / Hút hầm cầu / Liên hệ).
+- `useFocusTrap`: Tab vòng trong panel, Escape đóng, trả focus. Menu mobile dùng hook này.
+- Desktop: nút Liên hệ mở dialog (Zalo, gọi, trang liên hệ), không đổi nav hamburger.
+
+## 26/11/2026 — P4 H2 + SVG divider (homepage)
+
+- `SectionHeading` có `decorated`: H2 `text-brand` căn giữa, ~28/34px, SVG lá brand + chấm accent (`aria-hidden`).
+- Áp dụng trang chủ: pain points, intro, dịch vụ, lý do, quy trình, khu vực, FAQ. Không đụng banner CTA, H1, trang dịch vụ/blog/privacy.
+- Trang khác giữ H2 trái, `text-ink`, không divider (`decorated` mặc định tắt).
+
+## 26/11/2026 — UI refinement batch 01 (trang chủ)
+
+- Copy homepage/footer: MTX cung cấp dịch vụ; bỏ “kênh kết nối / đơn vị cung cấp”.
+- Pain points mobile: chữ/padding; FAB nhỏ hơn trên mobile, desktop giữ size-14.
+- Quy trình: timeline dọc < md; desktop 5 cột giữ nguyên.
+
+## 25/11/2026 — Hero ảnh dịch vụ
+
+- `hero-cover.jpg`: ảnh thực tế-giống, xe hút hầm + ống/máy thông cống, nhà phố, không logo/chữ.
+- Alt: `Xe hút hầm cầu và thiết bị thông cống tại khu dân cư.`

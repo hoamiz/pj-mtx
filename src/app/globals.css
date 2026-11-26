@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
+/* MTX palette: Forest Green + Orange Accent */
 @theme {
   --color-brand: #16834a;
-  --color-accent: #1677b8;
-  --color-surface: #f1f5f9;
-  --color-ink: #1f2937;
-  --color-muted: #4b5563;
+  --color-accent: #f28c28;
+  --color-surface: #f5f8f4;
+  --color-ink: #17251c;
+  --color-muted: #526158;
   --color-paper: #ffffff;
   --font-sans: var(--font-be-vietnam-pro), "Segoe UI", system-ui, sans-serif;
 }

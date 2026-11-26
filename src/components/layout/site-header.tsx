@@ -3,21 +3,27 @@
 import { useId, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ContactDialog } from "@/components/layout/contact-dialog";
 import { MobileNavigation } from "@/components/layout/mobile-navigation";
 import { NavLinks } from "@/components/layout/nav-links";
-import { ButtonLink } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import { contactHref, hasPhone, siteConfig } from "@/config/site";
+import { hasPhone, siteConfig } from "@/config/site";
 import { media } from "@/content/media";
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
   const menuButtonId = useId();
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const contactButtonRef = useRef<HTMLButtonElement>(null);
 
   function closeMenu() {
     setMenuOpen(false);
-    menuButtonRef.current?.focus();
+  }
+
+  function closeContact() {
+    setContactOpen(false);
   }
 
   return (
@@ -30,7 +36,7 @@ export function SiteHeader() {
           {hasPhone ? (
             <a
               href={`tel:${siteConfig.phone}`}
-              className="font-semibold text-brand"
+              className="font-semibold text-ink"
             >
               {siteConfig.phone}
             </a>
@@ -57,7 +63,15 @@ export function SiteHeader() {
           <NavLinks className="flex items-center gap-6" />
         </nav>
         <div className="hidden md:block">
-          <ButtonLink href={contactHref}>Liên hệ</ButtonLink>
+          <Button
+            ref={contactButtonRef}
+            type="button"
+            aria-haspopup="dialog"
+            aria-expanded={contactOpen}
+            onClick={() => setContactOpen(true)}
+          >
+            Liên hệ
+          </Button>
         </div>
         <button
           id={menuButtonId}
@@ -72,7 +86,16 @@ export function SiteHeader() {
           <span aria-hidden="true">{menuOpen ? "✕" : "☰"}</span>
         </button>
       </Container>
-      <MobileNavigation open={menuOpen} onClose={closeMenu} />
+      <MobileNavigation
+        open={menuOpen}
+        onClose={closeMenu}
+        returnFocusRef={menuButtonRef}
+      />
+      <ContactDialog
+        open={contactOpen}
+        onClose={closeContact}
+        returnFocusRef={contactButtonRef}
+      />
     </header>
   );
 }

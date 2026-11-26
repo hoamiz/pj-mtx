@@ -21,6 +21,7 @@ type PageMetadataInput = {
   description: string;
   path: string;
   absoluteTitle?: string;
+  openGraphType?: "website" | "article";
 };
 
 export function pageMetadata({
@@ -28,6 +29,7 @@ export function pageMetadata({
   description,
   path,
   absoluteTitle,
+  openGraphType = "website",
 }: PageMetadataInput): Metadata {
   const canonical = absoluteUrl(path);
   const ogTitle = absoluteTitle ?? title;
@@ -40,7 +42,7 @@ export function pageMetadata({
       title: ogTitle,
       description,
       locale: "vi_VN",
-      type: "website",
+      type: openGraphType,
       url: canonical,
       siteName: siteConfig.name,
     },

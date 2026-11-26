@@ -7,7 +7,7 @@ export const siteConfig = {
   gaMeasurementId: "",
   serviceArea: "Biên Hòa, Đồng Nai",
   title: "Môi Trường Xanh MTX – Thông Cống, Hút Hầm Cầu Biên Hòa",
-  role: "Môi Trường Xanh (MTX) là kênh tiếp nhận nhu cầu và hỗ trợ kết nối dịch vụ thông cống, hút hầm cầu tại Biên Hòa, Đồng Nai. Khách hàng có thể liên hệ trực tiếp qua Zalo hoặc điện thoại để được tư vấn và hỗ trợ sắp xếp dịch vụ.",
+  role: "Môi Trường Xanh (MTX) cung cấp dịch vụ thông cống và hút hầm cầu tại Biên Hòa, Đồng Nai. Khách hàng có thể liên hệ trực tiếp qua Zalo hoặc điện thoại để được tư vấn.",
 } as const;
 
 export const navItems = [

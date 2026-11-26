@@ -52,8 +52,8 @@ export function ReasonsGrid() {
   return (
     <section className="bg-surface">
       <Container className="py-12 md:py-16">
-        <SectionHeading title={homeContent.reasons.title} />
-        <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+        <SectionHeading title={homeContent.reasons.title} decorated />
+        <ul className="mx-auto mt-8 grid max-w-3xl gap-4 md:grid-cols-3">
           {homeContent.reasons.items.map((item, index) => (
             <li
               key={item}

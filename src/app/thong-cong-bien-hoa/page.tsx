@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ServiceViewTracker } from "@/components/analytics/service-view-tracker";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { ContactBanner } from "@/components/sections/contact-banner";
+import { RelatedPosts } from "@/components/sections/related-posts";
 import { FAQList } from "@/components/sections/faq-list";
 import { ButtonLink } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -10,6 +11,7 @@ import { ContentImage } from "@/components/ui/content-image";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { drainFaqs } from "@/content/faq";
 import { drainCleaningContent as content } from "@/content/drain-cleaning";
+import { getPostsBySlugs } from "@/content/blog";
 import { contactHref } from "@/config/site";
 import { media } from "@/content/media";
 import { pageMetadata } from "@/lib/metadata";
@@ -116,6 +118,12 @@ export default function DrainCleaningPage() {
       </section>
 
       <FAQList items={drainFaqs} />
+      <RelatedPosts
+        posts={getPostsBySlugs([
+          "dau-hieu-cong-thoat-nuoc-bi-nghet",
+          "nguyen-nhan-cong-thoat-nuoc-bi-nghet",
+        ])}
+      />
       <ContactBanner title={content.closing.title} body={content.closing.body} />
     </>
   );

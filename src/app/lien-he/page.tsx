@@ -27,7 +27,7 @@ export default function ContactPage() {
             <h1 className="max-w-3xl text-3xl font-semibold tracking-tight text-ink md:text-4xl">
               {content.title}
             </h1>
-            <p className="mt-4 max-w-3xl text-lg leading-relaxed text-ink/80">
+            <p className="mt-4 max-w-3xl text-lg leading-relaxed text-muted">
               {content.intro}
             </p>
             <p className="mt-3 max-w-3xl leading-relaxed text-ink">
@@ -39,7 +39,7 @@ export default function ContactPage() {
           </div>
           <div className="rounded-lg border border-brand/15 bg-surface p-6">
             <p className="font-semibold text-ink">{content.channelsLabel}</p>
-            <p className="mt-2 text-sm leading-relaxed text-ink/80">
+            <p className="mt-2 text-sm leading-relaxed text-muted">
               {content.area}
             </p>
             <ContactCTAGroup className="mt-6" placement="contact_page" />

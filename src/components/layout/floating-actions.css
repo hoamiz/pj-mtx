@@ -68,8 +68,15 @@
   position: relative;
   display: grid;
   place-items: center;
-  width: 5.75rem;
-  height: 5.75rem;
+  width: 4.75rem;
+  height: 4.75rem;
+}
+
+@media (min-width: 768px) {
+  .mtx-fab-wrap {
+    width: 5.75rem;
+    height: 5.75rem;
+  }
 }
 
 .mtx-fab-ring,

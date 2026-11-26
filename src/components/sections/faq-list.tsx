@@ -12,9 +12,14 @@ export type FaqItem = {
 type FAQListProps = {
   items: readonly FaqItem[];
   showContact?: boolean;
+  decoratedHeading?: boolean;
 };
 
-export function FAQList({ items, showContact = true }: FAQListProps) {
+export function FAQList({
+  items,
+  showContact = true,
+  decoratedHeading = false,
+}: FAQListProps) {
   const faqLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -32,8 +37,14 @@ export function FAQList({ items, showContact = true }: FAQListProps) {
     <section className="bg-paper">
       <JsonLd data={faqLd} />
       <Container className="py-12 md:py-16">
-        <SectionHeading title="Câu hỏi thường gặp" />
-        <div className="mt-8 divide-y divide-brand/15 border-y border-brand/15">
+        <SectionHeading title="Câu hỏi thường gặp" decorated={decoratedHeading} />
+        <div
+          className={
+            decoratedHeading
+              ? "mx-auto mt-8 max-w-2xl divide-y divide-brand/15 border-y border-brand/15"
+              : "mt-8 divide-y divide-brand/15 border-y border-brand/15"
+          }
+        >
           {items.map((item) => (
             <details key={item.question} className="py-4">
               <summary className="cursor-pointer py-1 text-base font-semibold text-ink">
@@ -46,9 +57,13 @@ export function FAQList({ items, showContact = true }: FAQListProps) {
           ))}
         </div>
         {showContact ? (
-          <ButtonLink href={contactHref} className="mt-8">
-            Liên hệ tư vấn
-          </ButtonLink>
+          <div
+            className={
+              decoratedHeading ? "mt-8 flex justify-center" : "mt-8"
+            }
+          >
+            <ButtonLink href={contactHref}>Liên hệ tư vấn</ButtonLink>
+          </div>
         ) : null}
       </Container>
     </section>

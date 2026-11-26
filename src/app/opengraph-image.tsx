@@ -29,11 +29,11 @@ export default function OpenGraphImage() {
           {siteConfig.shortName}
         </div>
         <div style={{ marginTop: 24, fontSize: 56, fontWeight: 700, lineHeight: 1.2 }}>
-          Thong cong & hut ham cau
+          Thông cống & hút hầm cầu
         </div>
         <div style={{ marginTop: 20, fontSize: 32 }}>{siteConfig.serviceArea}</div>
         <div style={{ marginTop: 28, fontSize: 24, opacity: 0.9 }}>
-          Kenh tiep nhan nhu cau va ho tro ket noi dich vu
+          Kênh tiếp nhận nhu cầu và hỗ trợ kết nối dịch vụ
         </div>
       </div>
     ),

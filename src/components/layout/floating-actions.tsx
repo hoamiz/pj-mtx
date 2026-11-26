@@ -14,11 +14,11 @@ import { cn } from "@/lib/utils";
 import "./floating-actions.css";
 
 const fabButton =
-  "relative z-[1] inline-flex size-14 items-center justify-center rounded-full border-2 border-white shadow-[0_0_8px_rgba(0,0,0,0.35)]";
+  "relative z-[1] inline-flex size-12 items-center justify-center rounded-full border-2 border-white shadow-[0_0_8px_rgba(0,0,0,0.35)] md:size-14";
 
 function PhoneIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="size-7" aria-hidden="true">
+    <svg viewBox="0 0 24 24" className="size-6 md:size-7" aria-hidden="true">
       <path
         fill="currentColor"
         d="M7.2 3.5c.4-.4 1-.5 1.5-.3l2.1.8c.7.3 1.1 1 1 1.8l-.3 2.2c-.1.5-.3.9-.7 1.2l-1 1c1.2 2.1 2.9 3.8 5 5l1-1c.3-.4.7-.6 1.2-.7l2.2-.3c.8-.1 1.5.3 1.8 1l.8 2.1c.2.5.1 1.1-.3 1.5l-1.5 1.5c-.5.5-1.2.7-1.9.6-3.4-.5-6.6-2.3-9-4.7S4.7 10 4.2 6.6c-.1-.7.1-1.4.6-1.9l2.4-1.2Z"
@@ -29,7 +29,7 @@ function PhoneIcon() {
 
 function ChevronUpIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="size-7" aria-hidden="true">
+    <svg viewBox="0 0 24 24" className="size-6 md:size-7" aria-hidden="true">
       <path
         fill="currentColor"
         d="M12 7.5 5.5 14a1 1 0 1 0 1.4 1.4L12 10.3l5.1 5.1a1 1 0 0 0 1.4-1.4Z"
@@ -84,7 +84,7 @@ export function FloatingActions() {
   }
 
   return (
-    <div className="fixed right-1 bottom-1 z-30 flex flex-col items-center">
+    <div className="fixed right-2 bottom-[max(1rem,env(safe-area-inset-bottom))] z-30 flex flex-col items-center md:right-1 md:bottom-1">
       {showContactFabs && hasZalo ? (
         <FabWrap className="text-[#0068FF]">
           <a

@@ -66,17 +66,34 @@ export function ProcessSteps() {
         <SectionHeading
           title={homeContent.process.title}
           description={homeContent.process.description}
+          decorated
         />
-        <ol className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+        <ol className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5">
           {homeContent.process.steps.map((step, index) => (
-            <li key={step} className="text-center">
-              <div className="mx-auto flex size-16 items-center justify-center">
+            <li
+              key={step}
+              className="relative flex gap-4 text-left md:flex-col md:text-center"
+            >
+              {index < homeContent.process.steps.length - 1 ? (
+                <span
+                  className="absolute top-16 left-8 z-0 w-px -translate-x-1/2 bg-brand/30 max-md:bottom-[-1.5rem] md:hidden"
+                  aria-hidden="true"
+                />
+              ) : null}
+              <div className="relative z-[1] flex size-16 shrink-0 items-center justify-center bg-paper md:mx-auto md:bg-transparent">
                 <ProcessStepIcon index={index} />
               </div>
-              <p className="mt-3 text-sm font-semibold text-brand">
-                Bước {index + 1}
-              </p>
-              <p className="mt-2 leading-relaxed text-ink">{step}</p>
+              <div className="min-w-0 flex-1 pb-2 pr-14 md:pb-0 md:pr-0">
+                <p className="inline-block rounded-md bg-accent px-2 py-0.5 text-sm font-semibold text-ink">
+                  Bước {index + 1}
+                </p>
+                <p className="mt-2 text-base leading-relaxed text-ink md:hidden">
+                  {homeContent.process.stepsMobile[index]}
+                </p>
+                <p className="mt-2 hidden text-base leading-relaxed text-ink md:block">
+                  {step}
+                </p>
+              </div>
             </li>
           ))}
         </ol>

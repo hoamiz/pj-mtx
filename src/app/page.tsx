@@ -38,8 +38,8 @@ export default function Home() {
       <PainPoints />
       <section className="bg-surface">
         <Container className="py-12 md:py-16">
-          <SectionHeading title={homeContent.intro.title} />
-          <p className="mt-4 max-w-3xl text-lg leading-relaxed text-ink">
+          <SectionHeading title={homeContent.intro.title} decorated />
+          <p className="mx-auto mt-6 hidden max-w-2xl text-center text-lg leading-relaxed text-ink md:block">
             {homeContent.intro.body}
           </p>
         </Container>
@@ -48,7 +48,7 @@ export default function Home() {
       <ReasonsGrid />
       <ProcessSteps />
       <ServiceAreaSection />
-      <FAQList items={homeFaqs} />
+      <FAQList items={homeFaqs} decoratedHeading />
       <ContactBanner
         title={homeContent.closing.title}
         body={homeContent.closing.body}

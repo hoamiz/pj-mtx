@@ -14,7 +14,7 @@ export function ServiceGrid() {
   return (
     <section className="bg-paper">
       <Container className="py-12 md:py-16">
-        <SectionHeading title="Hai dịch vụ MTX tiếp nhận" />
+        <SectionHeading title="Hai dịch vụ tại MTX" decorated />
         <ul className="mt-8 grid gap-6 md:grid-cols-2">
           {homeContent.services.map((service) => {
             const image = serviceImages[service.href];
@@ -22,17 +22,17 @@ export function ServiceGrid() {
             return (
               <li key={service.href}>
                 <article className="flex h-full flex-col overflow-hidden rounded-lg border border-brand/15 bg-surface transition hover:border-brand/40 hover:shadow-md">
-                  <div className="h-1.5 bg-brand" aria-hidden="true" />
+                  <div className="h-1.5 bg-accent" aria-hidden="true" />
                   <ContentImage
                     src={image.src}
                     alt={image.alt}
                     width={image.width}
                     height={image.height}
-                    className="p-4 pb-0"
+                    className="px-5 pt-5"
                   />
-                  <div className="flex flex-1 flex-col p-6 pt-4">
+                  <div className="flex flex-1 flex-col p-6 pt-5">
                     <h3 className="text-xl font-semibold text-ink">{service.title}</h3>
-                    <p className="mt-3 flex-1 text-base leading-relaxed text-ink/80">
+                    <p className="mt-3 flex-1 text-base leading-relaxed text-muted">
                       {service.description}
                     </p>
                     <ButtonLink

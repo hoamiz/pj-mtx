@@ -1,62 +1,31 @@
 "use client";
 
-import { useEffect, useId, useRef } from "react";
+import { useId, useRef, type RefObject } from "react";
 import { NavLinks } from "@/components/layout/nav-links";
 import { ButtonLink } from "@/components/ui/button";
 import { contactHref } from "@/config/site";
+import { useFocusTrap } from "@/hooks/use-focus-trap";
 
 type MobileNavigationProps = {
   open: boolean;
   onClose: () => void;
+  returnFocusRef: RefObject<HTMLElement | null>;
 };
 
-export function MobileNavigation({ open, onClose }: MobileNavigationProps) {
+export function MobileNavigation({
+  open,
+  onClose,
+  returnFocusRef,
+}: MobileNavigationProps) {
   const titleId = useId();
   const panelRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (!open) {
-      return;
-    }
-
-    const panel = panelRef.current;
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-
-    const focusable = panel?.querySelectorAll<HTMLElement>(
-      "a[href], button:not([disabled])",
-    );
-    focusable?.[0]?.focus();
-
-    function onKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") {
-        onClose();
-        return;
-      }
-
-      if (event.key !== "Tab" || !focusable || focusable.length === 0) {
-        return;
-      }
-
-      const first = focusable[0];
-      const last = focusable[focusable.length - 1];
-
-      if (event.shiftKey && document.activeElement === first) {
-        event.preventDefault();
-        last.focus();
-      } else if (!event.shiftKey && document.activeElement === last) {
-        event.preventDefault();
-        first.focus();
-      }
-    }
-
-    document.addEventListener("keydown", onKeyDown);
-
-    return () => {
-      document.body.style.overflow = previousOverflow;
-      document.removeEventListener("keydown", onKeyDown);
-    };
-  }, [open, onClose]);
+  useFocusTrap({
+    open,
+    containerRef: panelRef,
+    onClose,
+    returnFocusRef,
+  });
 
   if (!open) {
     return null;

@@ -8,7 +8,8 @@ export type AnalyticsPlacement =
   | "floating"
   | "pricing"
   | "access_survey"
-  | "contact_page";
+  | "contact_page"
+  | "blog";
 
 export type ServiceType = "drain_cleaning" | "septic_pumping";
 

@@ -117,7 +117,7 @@ export function ContactLinks({
         <a
           href={siteConfig.zaloUrl}
           rel="noopener noreferrer"
-          className="font-semibold text-accent"
+          className="font-semibold text-[#0068FF]"
           onClick={() => handleContactClick("zalo", placement, serviceType)}
         >
           Zalo

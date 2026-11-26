@@ -2,11 +2,11 @@ export const homeFaqs = [
   {
     question: "MTX hỗ trợ những dịch vụ nào?",
     answer:
-      "MTX tiếp nhận nhu cầu thông cống nghẹt, thông đường ống thoát nước và hút hầm cầu tại Biên Hòa.",
+      "MTX cung cấp dịch vụ thông cống nghẹt, thông đường ống thoát nước và hút hầm cầu tại Biên Hòa.",
   },
   {
-    question: "MTX tiếp nhận yêu cầu ở đâu?",
-    answer: "MTX tiếp nhận nhu cầu tại Biên Hòa, Đồng Nai.",
+    question: "MTX phục vụ ở đâu?",
+    answer: "MTX phục vụ tại Biên Hòa, Đồng Nai.",
   },
   {
     question: "Tôi cần liên hệ bằng cách nào?",

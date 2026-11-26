@@ -29,9 +29,9 @@ export function NavLinks({
               href={item.href}
               aria-current={isCurrent ? "page" : undefined}
               className={cn(
-                "inline-flex min-h-11 items-center text-base font-medium text-ink",
+                "inline-flex min-h-11 items-center text-base font-medium text-ink md:text-lg md:font-semibold",
                 isCurrent &&
-                  "font-semibold text-brand underline decoration-brand decoration-2 underline-offset-4",
+                  "font-semibold text-brand underline decoration-brand decoration-2 underline-offset-4 md:font-bold",
                 linkClassName,
               )}
               onClick={onNavigate}

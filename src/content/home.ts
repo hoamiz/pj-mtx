@@ -1,29 +1,31 @@
 export const homeContent = {
   metaDescription:
-    "MTX tiếp nhận nhu cầu, tư vấn và hỗ trợ kết nối dịch vụ thông cống và hút hầm cầu cho hộ gia đình, nhà trọ, cửa hàng và nhà hàng tại Biên Hòa, Đồng Nai.",
+    "Môi Trường Xanh (MTX) cung cấp dịch vụ thông cống và hút hầm cầu cho hộ gia đình, nhà trọ, cửa hàng và nhà hàng tại Biên Hòa, Đồng Nai.",
   hero: {
     eyebrow: "DỊCH VỤ TẠI BIÊN HÒA, ĐỒNG NAI",
     title: "Thông Cống & Hút Hầm Cầu Tại Biên Hòa",
     description:
-      "MTX tiếp nhận nhu cầu, tư vấn và hỗ trợ kết nối dịch vụ cho hộ gia đình, nhà trọ, cửa hàng và nhà hàng.",
+      "Môi Trường Xanh (MTX) cung cấp dịch vụ thông cống và hút hầm cầu cho hộ gia đình, nhà trọ, cửa hàng và nhà hàng tại Biên Hòa, Đồng Nai.",
+    descriptionMobile:
+      "Thông cống và hút hầm cầu tại Biên Hòa, Đồng Nai.",
     contactHint: "Liên hệ Zalo hoặc điện thoại để được tư vấn.",
   },
   intro: {
-    title: "MTX là kênh tiếp nhận và kết nối dịch vụ",
-    body: "Môi Trường Xanh (MTX) là kênh tiếp nhận nhu cầu và hỗ trợ kết nối dịch vụ thông cống, hút hầm cầu tại Biên Hòa, Đồng Nai. Khách hàng có thể liên hệ trực tiếp qua Zalo hoặc điện thoại để được tư vấn và hỗ trợ sắp xếp dịch vụ.",
+    title: "Môi Trường Xanh (MTX) cung cấp dịch vụ thông cống và hút hầm cầu tại Biên Hòa, Đồng Nai.",
+    body: "Môi Trường Xanh (MTX) cung cấp dịch vụ thông cống và hút hầm cầu tại Biên Hòa, Đồng Nai. Khách hàng có thể liên hệ trực tiếp qua Zalo hoặc điện thoại để được tư vấn và sắp xếp lịch.",
   },
   services: [
     {
       href: "/thong-cong-bien-hoa",
       title: "Thông cống",
       description:
-        "Tiếp nhận nhu cầu thông cống nghẹt và thông đường ống thoát nước cho hộ gia đình, nhà trọ, cửa hàng và nhà hàng tại Biên Hòa.",
+        "Thông cống nghẹt và thông đường ống thoát nước cho hộ gia đình, nhà trọ, cửa hàng và nhà hàng tại Biên Hòa.",
     },
     {
       href: "/hut-ham-cau-bien-hoa",
       title: "Hút hầm cầu",
       description:
-        "Tiếp nhận nhu cầu hút hầm cầu cho hộ gia đình, nhà trọ, cửa hàng, nhà hàng và công trình kinh doanh tại Biên Hòa.",
+        "Hút hầm cầu cho hộ gia đình, nhà trọ, cửa hàng, nhà hàng và công trình kinh doanh tại Biên Hòa.",
     },
   ],
   painPoints: {
@@ -44,13 +46,20 @@ export const homeContent = {
       "Nhà tắm bị nghẹt",
       "Hầm cầu đầy tràn",
     ],
+    itemsMobile: [
+      "Cống thoát nước bị nghẹt",
+      "Bồn cầu bị nghẹt, thoát nước chậm",
+      "Nước thải trào ngược",
+      "Bồn rửa chén bị nghẹt",
+      "Bồn cầu sủi bọt, kêu ục ục",
+      "Hầm cầu đầy hoặc có mùi hôi",
+    ],
   },
   reasons: {
     title: "Lý do liên hệ MTX",
     items: [
-      "Tiếp nhận nhu cầu qua Zalo hoặc điện thoại.",
+      "Liên hệ qua Zalo hoặc điện thoại MTX.",
       "Tư vấn theo tình trạng thực tế.",
-      "Hỗ trợ kết nối đơn vị cung cấp dịch vụ.",
       "Hỗ trợ hẹn lịch sớm nhất có thể.",
     ],
   },
@@ -59,11 +68,18 @@ export const homeContent = {
     description:
       "Từ lúc liên hệ đến khi hoàn tất dịch vụ, khách hàng làm việc trực tiếp với MTX.",
     steps: [
-      "Liên hệ MTX, tiếp nhận tư vấn về mức giá và thời gian thực hiện.",
-      "Nhân viên khảo sát và tư vấn cụ thể cho khách hàng.",
-      "Tiến hành thực hiện bởi nhân viên có kinh nghiệm.",
+      "Liên hệ MTX để được tư vấn mức giá và thời gian thực hiện.",
+      "Nhân viên MTX khảo sát và tư vấn cụ thể.",
+      "MTX thực hiện dịch vụ theo lịch đã thống nhất.",
       "Đánh giá và nghiệm thu dịch vụ.",
       "Thanh toán và bảo hành dịch vụ.",
+    ],
+    stepsMobile: [
+      "Liên hệ MTX",
+      "Khảo sát",
+      "Thực hiện",
+      "Nghiệm thu",
+      "Thanh toán",
     ],
   },
   area: {
